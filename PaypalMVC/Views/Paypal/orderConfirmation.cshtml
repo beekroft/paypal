@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Success";
+}
+
+<h2>Success</h2>
+<div>
+    Thank you for your payment. Your transaction has been completed and we've emailed you a receipt for your purchase. Log in to your PayPal account to view transaction details.
+    <label><strong>Transaction Id:</strong></label>
+    @ViewBag.result.TransactionId
+    <br />
+    <label><strong>Payer First Name:</strong></label>
+    @ViewBag.result.PayerFirstName
+    <br />
+    <label><strong>Payer Last Name:</strong></label>
+    @ViewBag.result.PayerLastName
+    <br />
+    <label><strong>Item Name:</strong></label>
+    @ViewBag.result.ItemName
+    <br />
+    <label><strong>Invoice Number:</strong></label>
+    @ViewBag.result.InvoiceNumber
+</div>

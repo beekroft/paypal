@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Paypal";
+}
+@using System.Configuration
+<h2>Paypal</h2>>
+
+<form method="post" action="@ConfigurationManager.AppSettings["PaypalSubmitUrl"]">
+    <input type="hidden" name="upload" value="1" />
+    <input type="hidden" name="return" value="@ConfigurationManager.AppSettings["ReturnUrl"]" />
+    <input type="hidden" name="cmd" value="_cart" />
+    <input type="hidden" name="business" value="@ConfigurationManager.AppSettings["PayPalUserName"]" />
+
+    <input type="hidden" name="item_name_1" value="Product 1" />
+    <input type="hidden" name="item_number_1" value="p1" />
+    <input type="hidden" name="amount_1" value="2" />
+    <input type="hidden" name="quantity_1" value="3" />
+
+    <input type="hidden" name="item_name_2" value="Product 2" />
+    <input type="hidden" name="item_number_2" value="p2" />
+    <input type="hidden" name="amount_2" value="2" />
+    <input type="hidden" name="quantity_2" value="5" />
+
+    <input type="hidden" name="item_name_3" value="Product 3" />
+    <input type="hidden" name="item_number_3" value="p3" />
+    <input type="hidden" name="amount_3" value="2" />
+    <input type="hidden" name="quantity_3" value="30" />
+
+    <input type="image" src="https://www.paypal.com/en_us/i/btn/btn_xpressCheckout.gif " />
+</form>
+<div>
+    <br />
+    <b>Use following credentials to pay:</b><br />
+    <b>User: </b>harry_buyer@edg.com.au<br />
+    <b>Password:</b> Password/123
+</div>
